@@ -1,6 +1,7 @@
 "use client"
 import Image from 'next/image'
 import { motion, useReducedMotion } from 'framer-motion'
+import portrait from '../public/imge_person.png'
 
 export default function Hero(){
   const name = 'Ahmed Chtourou'
@@ -21,7 +22,7 @@ export default function Hero(){
       <motion.div initial={reduce ? {} : { scale: 0.97, opacity: 0 }} animate={reduce ? {} : { scale: 1, opacity: 1 }} transition={{ duration: 0.6 }} className="sticky top-20 overflow-hidden rounded-xl border border-white/10 bg-slate-950/80 shadow-xl shadow-indigo-950/20">
         <div className="relative aspect-[3/4]">
           <Image
-            src="/imge_person.png"
+            src={portrait}
             alt="Ahmed Chtourou portrait"
             fill
             className="object-cover"
