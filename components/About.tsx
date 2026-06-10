@@ -1,22 +1,28 @@
-"use client"
-import { motion } from 'framer-motion'
+import { education, profile } from "../lib/portfolio"
+import Section from "./ui/Section"
+import Reveal from "./ui/Reveal"
 
-export default function About(){
+export default function About() {
   return (
-    <section id="about" className="mt-12">
-      <motion.h2 whileInView={{opacity:1, y:0}} initial={{opacity:0,y:20}} className="text-3xl font-semibold">About</motion.h2>
-      <motion.div whileInView={{opacity:1, y:0}} initial={{opacity:0,y:20}} className="mt-6 glass p-6 rounded-xl max-w-3xl">
-        <p>
-          AI Engineer, Data Engineer, and Researcher with experience in Generative AI, MLOps, and Cloud Data Platforms. I build and deploy production-grade LLM applications, multimodal systems and scalable data architectures on Google Cloud and Azure. Domain expertise spans Retail, Marketing, Supply Chain, Manufacturing, Knowledge Management and Healthcare.
-        </p>
-        <div className="mt-4 text-sm text-indigo-200/60">
-          <strong>Education:</strong>
-          <ul className="ml-4 list-disc">
-            <li>PhD Candidate in Artificial Intelligence — National School of Engineering of Sfax (ENIS) (2026 – Present)</li>
-            <li>Engineering Diploma in Computer Science — National School of Electronics and Telecommunications of Sfax (2021 - 2024)</li>
-          </ul>
+    <Section id="about" title="About" eyebrow="Profile">
+      <Reveal className="grid gap-6 lg:grid-cols-[1.3fr_0.7fr]">
+        <div className="rounded-lg border border-white/10 bg-white/[0.03] p-6">
+          <p className="text-base leading-8 text-slate-200/85">
+            {profile.summary} I focus on useful AI systems: grounded retrieval, measurable evaluation, reliable data
+            pipelines, and interfaces that make complex workflows easier to operate.
+          </p>
         </div>
-      </motion.div>
-    </section>
+        <aside className="rounded-lg border border-white/10 bg-slate-950/60 p-6">
+          <h3 className="text-sm font-semibold uppercase tracking-[0.18em] text-teal-300/90">
+            Education
+          </h3>
+          <ul className="mt-4 space-y-3 text-sm leading-6 text-slate-200/80">
+            {education.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        </aside>
+      </Reveal>
+    </Section>
   )
 }

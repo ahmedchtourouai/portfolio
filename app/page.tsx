@@ -1,21 +1,21 @@
-"use client"
-import Hero from '../components/Hero'
-import About from '../components/About'
-import Skills from '../components/Skills'
-import Experience from '../components/Experience'
-import Projects from '../components/Projects'
-import Contact from '../components/Contact'
-import { motion } from 'framer-motion'
+import About from "../components/About"
+import Certifications from "../components/Certifications"
+import Contact from "../components/Contact"
+import Experience from "../components/Experience"
+import Hero from "../components/Hero"
+import Projects from "../components/Projects"
+import Skills from "../components/Skills"
 
-export default function Page(){
+export default function Page() {
   return (
-    <motion.main initial={{opacity:0}} animate={{opacity:1}} className="px-6 md:px-16 lg:px-32 py-12">
+    <main className="mx-auto w-full max-w-6xl px-5 py-10 sm:px-6 lg:px-8">
       <Hero />
       <About />
       <Skills />
       <Experience />
       <Projects />
+      <Certifications />
       <Contact />
-    </motion.main>
+    </main>
   )
 }

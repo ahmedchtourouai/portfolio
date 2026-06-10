@@ -1,13 +1,15 @@
-import '../styles/globals.css'
-import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
+import type { Metadata } from "next"
+import "../styles/globals.css"
+import Footer from "../components/Footer"
+import Navbar from "../components/Navbar"
 
-export const metadata = {
-  title: 'Ahmed Chtourou — AI Engineer',
-  description: 'Portfolio of Ahmed Chtourou — AI Engineer, Data Engineer, Researcher',
+export const metadata: Metadata = {
+  title: "Ahmed Chtourou - AI Engineer",
+  description:
+    "Portfolio of Ahmed Chtourou, AI Engineer, Data Engineer, and Researcher building GenAI and cloud data systems.",
 }
 
-export default function RootLayout({ children }: { children: React.ReactNode }){
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <body>

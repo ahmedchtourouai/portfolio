@@ -1,10 +1,11 @@
-"use client"
-import React from 'react'
+import { profile } from "../lib/portfolio"
 
-export default function Footer(){
+export default function Footer() {
   return (
-    <footer className="w-full py-8 mt-16 text-center text-sm text-indigo-200/60">
-      <div>© {new Date().getFullYear()} Ahmed Chtourou — AI Engineer · Data Engineer</div>
+    <footer className="mx-auto w-full max-w-6xl px-5 py-8 text-sm text-slate-400 sm:px-6 lg:px-8">
+      <div className="border-t border-white/10 pt-6">
+        Copyright {new Date().getFullYear()} {profile.name}. AI Engineer / Data Engineer.
+      </div>
     </footer>
   )
 }

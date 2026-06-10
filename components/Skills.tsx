@@ -1,34 +1,31 @@
-"use client"
-import { motion } from 'framer-motion'
+import { skillGroups } from "../lib/portfolio"
+import Section from "./ui/Section"
+import Reveal from "./ui/Reveal"
 
-const skillGroups = [
-  { title: 'ML / AI Development', items: ['PyTorch','TensorFlow','Keras','scikit-learn','Transformers','Diffusers','LLMs','RAG','Embeddings'] },
-  { title: 'Data Engineering', items: ['BigQuery','SQL','Spark','n8n','ETL/ELT','Data Modeling'] },
-  { title: 'Cloud & MLOps', items: ['Google Cloud (Vertex AI)','Azure (AzureML)','Docker','Kubernetes','MLflow','Cloud Build'] },
-  { title: 'Tools & Languages', items: ['Python','SQL','Git','Docker','Jira','Confluence'] },
-]
-
-export default function Skills(){
+export default function Skills() {
   return (
-    <section id="skills" className="mt-12">
-      <motion.h2 whileInView={{opacity:1, y:0}} initial={{opacity:0,y:20}} className="text-3xl font-semibold">Skills</motion.h2>
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-6">
-        {skillGroups.map((g)=> (
-          <motion.div key={g.title} whileHover={{y:-6}} className="glass p-4 rounded-lg">
-            <h3 className="font-medium mb-3">{g.title}</h3>
-            <ul className="space-y-2 text-sm text-indigo-100/80">
-              {g.items.map(i => (
-                <li key={i} className="flex justify-between items-center">
-                  <span>{i}</span>
-                  <div className="w-24 h-2 bg-white/6 rounded ml-4">
-                    <div className="h-2 bg-gradient-to-r from-indigo-500 to-teal-400 rounded" style={{width: Math.floor(Math.random()*60)+30 + '%'}} />
-                  </div>
-                </li>
+    <Section id="skills" title="Skills" eyebrow="Capabilities">
+      <div className="grid gap-4 md:grid-cols-2">
+        {skillGroups.map((group, index) => (
+          <Reveal
+            key={group.title}
+            delay={index * 0.04}
+            className="rounded-lg border border-white/10 bg-white/[0.03] p-5"
+          >
+            <h3 className="font-semibold text-white">{group.title}</h3>
+            <div className="mt-4 flex flex-wrap gap-2">
+              {group.items.map((item) => (
+                <span
+                  key={item}
+                  className="rounded-md border border-teal-300/15 bg-teal-300/10 px-2.5 py-1 text-xs font-medium text-teal-100"
+                >
+                  {item}
+                </span>
               ))}
-            </ul>
-          </motion.div>
+            </div>
+          </Reveal>
         ))}
       </div>
-    </section>
+    </Section>
   )
 }
