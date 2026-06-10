@@ -1,0 +1,10 @@
+.next/
+node_modules/
+out/
+
+.env*.local
+*.log
+
+tsconfig.tsbuildinfo
+
+personal_data_from_my resume.txt
