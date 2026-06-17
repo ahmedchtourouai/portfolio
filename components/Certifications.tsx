@@ -17,7 +17,7 @@ export default function Certifications() {
               <div>
                 <h3 className="font-semibold leading-6 text-white">{cert.title}</h3>
                 <p className="mt-1 text-sm text-slate-300/75">
-                  {cert.issuer} · {cert.date}
+                  {cert.issuer} / {cert.date}
                 </p>
                 <a
                   href={cert.link}

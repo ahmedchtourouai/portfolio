@@ -10,14 +10,14 @@ type SectionProps = {
 
 export default function Section({ id, title, eyebrow, children }: SectionProps) {
   return (
-    <section id={id} className="scroll-mt-24 py-12">
+    <section id={id} className="scroll-mt-24 py-16">
       <Reveal>
         {eyebrow ? (
-          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-teal-300/80">
+          <p className="section-eyebrow">
             {eyebrow}
           </p>
         ) : null}
-        <h2 className="mt-2 text-2xl font-semibold tracking-tight text-white md:text-3xl">
+        <h2 className="section-title">
           {title}
         </h2>
       </Reveal>

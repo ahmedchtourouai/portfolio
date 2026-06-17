@@ -8,8 +8,7 @@ export default function About() {
       <Reveal className="grid gap-6 lg:grid-cols-[1.3fr_0.7fr]">
         <div className="rounded-lg border border-white/10 bg-white/[0.03] p-6">
           <p className="text-base leading-8 text-slate-200/85">
-            {profile.summary} I focus on useful AI systems: grounded retrieval, measurable evaluation, reliable data
-            pipelines, and interfaces that make complex workflows easier to operate.
+            {profile.about}
           </p>
         </div>
         <aside className="rounded-lg border border-white/10 bg-slate-950/60 p-6">

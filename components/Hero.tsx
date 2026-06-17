@@ -6,9 +6,9 @@ import Reveal from "./ui/Reveal"
 
 export default function Hero() {
   return (
-    <section className="grid gap-8 py-10 md:grid-cols-[300px_1fr] md:items-center lg:gap-14">
+    <section id="hero" className="hero-mesh relative grid overflow-hidden rounded-2xl px-1 py-16 md:grid-cols-[300px_1fr] md:items-center md:gap-8 lg:gap-14">
       <Reveal className="mx-auto w-full max-w-[300px] md:mx-0">
-        <div className="overflow-hidden rounded-lg border border-white/10 bg-slate-950/80 shadow-2xl shadow-slate-950/40">
+        <div className="overflow-hidden rounded-xl border border-white/10 bg-slate-950/70 shadow-2xl shadow-slate-950/40 backdrop-blur-sm">
           <div className="relative aspect-[3/4]">
             <Image
               src={portrait}
@@ -20,21 +20,15 @@ export default function Hero() {
               placeholder="blur"
             />
           </div>
-          <div className="border-t border-white/10 p-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-teal-300">
-              {profile.title}
-            </p>
-            <p className="mt-1 font-semibold text-white">{profile.shortName}</p>
-          </div>
         </div>
       </Reveal>
 
-      <div>
+      <div className="relative z-10">
         <Reveal>
-          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-teal-300/90">
-            AI / MLOps / Data Platforms
+          <p className="section-eyebrow">
+            Production AI / MLOps / Data Platforms
           </p>
-          <h1 className="mt-4 max-w-4xl text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
+          <h1 className="hero-name mt-4 max-w-4xl">
             {profile.name}
           </h1>
           <p className="mt-4 text-lg text-slate-200/85 md:text-xl">
@@ -47,18 +41,15 @@ export default function Hero() {
 
         <Reveal delay={0.08} className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4">
           {highlights.map((item) => (
-            <div key={item} className="rounded-lg border border-white/10 bg-white/[0.03] p-3">
+            <div key={item} className="hero-stat">
               <p className="text-sm font-medium leading-6 text-slate-100">{item}</p>
             </div>
           ))}
         </Reveal>
 
         <Reveal delay={0.12} className="mt-8 flex flex-wrap gap-3">
-          <ButtonLink href={profile.github} variant="primary">
-            GitHub
-          </ButtonLink>
-          <ButtonLink href={profile.linkedin} target="_blank" rel="noreferrer">
-            LinkedIn
+          <ButtonLink href={profile.linkedin} variant="primary" target="_blank" rel="noreferrer">
+            View LinkedIn
           </ButtonLink>
           <ButtonLink href={profile.resume} download>
             Download Resume

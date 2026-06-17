@@ -11,7 +11,7 @@ npm run dev
 
 Open http://localhost:3000
 
-Public website: https://ahmedchtourouai.github.io/portfolio/
+Public website: portfolio site
 
 Notes
 - The contact form sends messages to `ahmedchtourou.ai@gmail.com` through FormSubmit. The first live submission may require email confirmation from FormSubmit.

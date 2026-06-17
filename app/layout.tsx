@@ -4,9 +4,9 @@ import Footer from "../components/Footer"
 import Navbar from "../components/Navbar"
 
 export const metadata: Metadata = {
-  title: "Ahmed Chtourou - AI Engineer",
+  title: "Ahmed Chtourou - Production AI Engineer",
   description:
-    "Portfolio of Ahmed Chtourou, AI Engineer, Data Engineer, and Researcher building GenAI and cloud data systems.",
+    "Portfolio of Ahmed Chtourou, a production AI Engineer building LLM applications, RAG systems, MLOps workflows, and cloud data platforms.",
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

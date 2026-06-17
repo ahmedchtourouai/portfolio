@@ -10,18 +10,18 @@ export default function Navbar() {
         Skip to content
       </a>
       <nav
-        className="mx-auto flex w-full max-w-6xl items-center justify-between gap-4 px-5 py-4 sm:px-6 lg:px-8"
+        className="mx-auto flex w-full max-w-6xl flex-col gap-3 px-5 py-4 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:gap-4 lg:px-8"
         aria-label="Primary navigation"
       >
-        <a href="#hero" className="text-base font-bold tracking-tight text-white">
+        <a href="#hero" className="self-start whitespace-nowrap text-base font-bold tracking-tight text-white">
           {profile.name}
         </a>
-        <div className="hidden items-center gap-4 md:flex">
+        <div className="-mx-5 flex w-[calc(100%+2.5rem)] items-center gap-3 overflow-x-auto px-5 pb-1 sm:-mx-6 sm:w-[calc(100%+3rem)] sm:px-6 lg:mx-0 lg:w-auto lg:flex-wrap lg:justify-end lg:overflow-visible lg:px-0 lg:pb-0">
           {navItems.map((item) => (
             <a
               key={item.href}
               href={item.href}
-              className="text-sm text-slate-200/75 underline-offset-4 transition hover:text-white hover:underline focus:outline-none focus:ring-2 focus:ring-teal-300"
+              className="nav-link shrink-0 whitespace-nowrap text-xs text-slate-200/75 transition hover:text-white focus:outline-none focus:ring-2 focus:ring-teal-300 xl:text-sm"
             >
               {item.label}
             </a>
