@@ -4,7 +4,7 @@ import Reveal from "./ui/Reveal"
 
 export default function Experience() {
   return (
-    <Section id="experience" title="Experience \u2014 Missions" eyebrow="Mission-based experience">
+    <Section id="experience" title="Experience - Missions" eyebrow="Mission-based experience">
       <div className="timeline relative space-y-6">
         {experience.map((item, index) => (
           <Reveal
